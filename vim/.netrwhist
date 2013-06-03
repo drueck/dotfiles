@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/david/projects/ats/config'
+let g:netrw_dirhist_2='/home/david/projects/artoplasm/.git'
+let g:netrw_dirhist_3='/home/david/projects/jekyll-asset-pipeline/lib/jekyll_asset_pipeline'
+let g:netrw_dirhist_4='/home/david/projects/jekyll/lib'
+let g:netrw_dirhist_5='/home/david/projects/pump-reports/app/assets/stylesheets'
+let g:netrw_dirhist_6='/home/david/.oh-my-zsh'
+let g:netrw_dirhist_7='/home/david/projects/ats'
