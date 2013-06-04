@@ -33,6 +33,9 @@ task :install do
       link_file(file)
     end
   end
+	puts "Installing vim plugins..."
+	system %{git submodule init}
+	system %{git submodule update}
 end
 
 def replace_file(file)
