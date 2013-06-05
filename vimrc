@@ -17,8 +17,6 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <F2> :NERDTreeToggle<CR>
 
-let g:syntastic_ruby_exec = '/home/david/.rbenv/versions/1.9.3-p286/bin/ruby'
-
 " disable arrow keys so i will use hjkl for nav
 map <up> <nop>
 map <down> <nop>
@@ -41,3 +39,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" specify the path to the ruby version for syntastic to use
+let g:syntastic_ruby_exec = '~/.rbenv/versions/2.0.0-p0/bin/ruby'
+
+" specify path to coffeelint config
+let coffee_lint_options = '-f ~/.coffeelint.json'
