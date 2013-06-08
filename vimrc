@@ -43,5 +43,5 @@ nnoremap <C-H> <C-W><C-H>
 " specify the path to the ruby version for syntastic to use
 let g:syntastic_ruby_exec = '~/.rbenv/versions/2.0.0-p0/bin/ruby'
 
-" specify path to coffeelint config
+" specify config file for coffeelint
 let coffee_lint_options = '-f ~/.coffeelint.json'

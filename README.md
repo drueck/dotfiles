@@ -9,6 +9,7 @@ Based on [Ryan Bates Dot Files](https://github.com/ryanb/dotfiles)
 - vim directory including some plugins I use
 - nice tmux config file from [ls-pair](https://github.com/livingsocial/ls-pair)
 - gitconfig setup including Ryan Bates' prompts for name and email
+- coffeelint config file supporting tab indentation (narrowly my preference for now)
 
 Note that I have some things hardcoded in config files that won't be applicable
 on every machine, particularly in vimrc and zshrc. I should move those elsewhere
@@ -39,6 +40,7 @@ the contents of the files before removing so you don't lose custom settings.
 unlink ~/.vim
 unlink ~/.vimrc
 unlink ~/.tmux.conf
+unlink ~/.coffeelint.json
 rm ~/.zshrc # careful here
 rm ~/.gitconfig
 rm -rf ~/.dotfiles
