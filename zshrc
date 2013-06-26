@@ -50,3 +50,4 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/local/heroku/bin:/home/david/.rbenv/shims:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/david/projects/code-generation:/home/david/.rbenv/bin
 
 export COFFEELINT_CONFIG=$HOME/.coffeelint.json
+export EDITOR=vim
