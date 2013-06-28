@@ -10,8 +10,10 @@ filetype plugin indent on
 let mapleader = " "
 
 colorscheme slate
-" colorscheme railscasts
-autocmd BufNewFile,BufRead *.json set ft=javascript
+
+au BufRead,BufNewFile *.json setf javascript
+au BufRead,BufNewFile *.rabl setf ruby
+au BufRead,BufNewFile *.ruby setf ruby
 
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
