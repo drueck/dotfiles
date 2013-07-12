@@ -47,3 +47,7 @@ let g:syntastic_ruby_exec = '~/.rbenv/versions/2.0.0-p195/bin/ruby'
 
 " specify config file for coffeelint
 let coffee_lint_options = '-f ~/.coffeelint.json'
+
+" enable per-directory .vimrc files and disable unsafe commands in those
+set exrc
+set secure
