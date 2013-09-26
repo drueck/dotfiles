@@ -1,9 +1,15 @@
 " Install plugins in .vim/bundle
 execute pathogen#infect()
 
+" default to 2 spaces for indentation
+" unless overriden in .vim/after/ftplugin/<type>.vim
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
+set expandtab
+
 set number
+
 syntax on
 filetype plugin indent on
 
@@ -43,7 +49,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " specify the path to the ruby version for syntastic to use
-let g:syntastic_ruby_exec = '~/.rbenv/versions/2.0.0-p195/bin/ruby'
+let g:syntastic_ruby_exec = '~/.rbenv/versions/2.0.0-p247/bin/ruby'
 
 " specify config file for coffeelint
 let coffee_lint_options = '-f ~/.coffeelint.json'

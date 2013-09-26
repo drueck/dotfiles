@@ -1,6 +1,6 @@
 {
   "no_tabs" : {
-    "level" : "ignore"
+    "level" : "error"
   },
 
   "no_trailing_whitespace" : {
@@ -17,7 +17,7 @@
   },
 
   "indentation" : {
-    "value" : 1,
+    "value" : 2,
     "level" : "error"
   },
 

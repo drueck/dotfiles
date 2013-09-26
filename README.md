@@ -9,7 +9,7 @@ Based on [Ryan Bates Dot Files](https://github.com/ryanb/dotfiles)
 - vim directory including some plugins I use
 - nice tmux config file from [ls-pair](https://github.com/livingsocial/ls-pair)
 - gitconfig setup including Ryan Bates' prompts for name and email
-- coffeelint config file supporting tab indentation (narrowly my preference for now)
+- coffeelint config file
 
 Note that I have some things hardcoded in config files that won't be applicable
 on every machine, particularly in vimrc and zshrc. I should move those elsewhere
