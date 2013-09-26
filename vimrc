@@ -1,5 +1,5 @@
 " Install plugins in .vim/bundle
-call pathogen#infect()
+execute pathogen#infect()
 
 set tabstop=2
 set shiftwidth=2
