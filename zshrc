@@ -46,11 +46,12 @@ plugins=(git command-not-found bundler rbenv tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=$PATH:/usr/local/heroku/bin:/home/david/.rbenv/shims:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/david/projects/code-generation:/home/david/.rbenv/bin:/home/david/programs/elixir/bin:/home/david/bin
-
 export GOROOT=$HOME/programs/go
-export PATH=$PATH:$GOROOT/bin
+
+# Customize to your needs...
+#export PATH=$PATH:/usr/local/heroku/bin:/home/david/.rbenv/shims:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/david/projects/code-generation:/home/david/.rbenv/bin:/home/david/programs/elixir/bin:/home/david/bin:$GOROOT/bin
+
+export PATH=$PATH:/usr/local/heroku/bin:/home/david/projects/code-generation:/home/david/programs/elixir/bin:/home/david/bin:$GOROOT/bin
 
 export COFFEELINT_CONFIG=$HOME/.coffeelint.json
 export EDITOR=vim
