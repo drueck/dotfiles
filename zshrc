@@ -39,6 +39,10 @@ alias trash='trash-put'
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# Disable flow control commands (keeps CTRL+S from freezing everything)
+stty start undef
+stty stop undef
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
