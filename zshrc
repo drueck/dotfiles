@@ -12,6 +12,7 @@ ZSH_THEME="drueck"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias phpl='find . -name "*.php" -exec php -l {} \; | grep -v "No syntax errors"'
 alias trash='trash-put'
+alias chrome=google-chrome
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
