@@ -13,6 +13,8 @@ ZSH_THEME="drueck"
 alias phpl='find . -name "*.php" -exec php -l {} \; | grep -v "No syntax errors"'
 alias trash='trash-put'
 alias chrome=google-chrome
+# do not wrap lines when listing routes
+alias rr='rake routes | less -S'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
