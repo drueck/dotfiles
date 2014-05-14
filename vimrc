@@ -15,6 +15,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'mustache/vim-mode'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on
