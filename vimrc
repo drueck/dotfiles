@@ -1,5 +1,23 @@
-" Install plugins in .vim/bundle
-execute pathogen#infect()
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'msanders/snipmate.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'tpope/vim-haml'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'mustache/vim-mode'
+
+call vundle#end()
+filetype plugin indent on
 
 " default to 2 spaces for indentation
 " unless overriden in .vim/after/ftplugin/<type>.vim
@@ -11,7 +29,6 @@ set expandtab
 set number
 
 syntax on
-filetype plugin indent on
 
 let mapleader = " "
 
