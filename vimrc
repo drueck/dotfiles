@@ -27,6 +27,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" hybrid numbering... show current line number on current line
+" and relative line numbers on all other lines
+set relativenumber
 set number
 
 syntax on
