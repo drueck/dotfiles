@@ -39,6 +39,8 @@ au BufRead,BufNewFile *.json setf javascript
 au BufRead,BufNewFile *.rabl setf ruby
 au BufRead,BufNewFile *.ruby setf ruby
 
+autocmd FileType php setlocal commentstring=//\ %s
+
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <F2> :NERDTreeToggle<CR>
