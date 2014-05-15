@@ -16,9 +16,14 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'mustache/vim-mode'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
 call vundle#end()
 filetype plugin indent on
+
+" required for vim-textobj-rubyblock
+runtime macros/matchit.vim
 
 " default to 2 spaces for indentation
 " unless overriden in .vim/after/ftplugin/<type>.vim
