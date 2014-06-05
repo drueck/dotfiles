@@ -18,6 +18,7 @@ Plugin 'mustache/vim-mode'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'ecomba/vim-ruby-refactoring'
 
 call vundle#end()
 filetype plugin indent on
