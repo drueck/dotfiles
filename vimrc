@@ -21,6 +21,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on
