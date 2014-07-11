@@ -11,7 +11,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-haml'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'digitaltoad/vim-jade'
@@ -96,6 +96,9 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+" vim-better-whitespace
+map <Leader>w :StripWhitespace<CR>
 
 let g:rspec_command = "!spring rspec {spec}"
 
