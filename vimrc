@@ -23,6 +23,7 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'skwp/greplace.vim'
 
 call vundle#end()
 filetype plugin indent on
