@@ -24,6 +24,7 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'skwp/greplace.vim'
+Plugin 'yssl/QFEnter'
 
 call vundle#end()
 filetype plugin indent on
