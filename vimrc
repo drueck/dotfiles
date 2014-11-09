@@ -56,6 +56,7 @@ au BufRead,BufNewFile *.rabl setf ruby
 au BufRead,BufNewFile *.ruby setf ruby
 
 autocmd FileType php setlocal commentstring=//\ %s
+autocmd FileType clojure RainbowParenthesesToggle
 
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
