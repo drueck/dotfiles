@@ -16,6 +16,7 @@ alias chrome=google-chrome
 # do not wrap lines when listing routes
 alias rr='rake routes | less -S'
 alias ggr='git graph'
+alias gf='git fetch'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
