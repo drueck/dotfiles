@@ -26,6 +26,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'skwp/greplace.vim'
 Plugin 'yssl/QFEnter'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'christoomey/vim-tmux-runner'
 
 call vundle#end()
 filetype plugin indent on
@@ -104,7 +105,10 @@ map <Leader>a :call RunAllSpecs()<CR>
 " vim-better-whitespace
 map <Leader>w :StripWhitespace<CR>
 
+" without VimTmuxRunner
 let g:rspec_command = "!spring rspec {spec}"
+" with VimTmuxRunner
+" let g:rspec_command = "VtrSendCommandToRunner! spring rspec {spec}"
 
 " CTRL+S to save
 map <C-s> <esc>:w<CR>
