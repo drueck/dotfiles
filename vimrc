@@ -134,3 +134,7 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
 set incsearch
+
+" shortcuts for moving rest of long line to the next line
+nmap <Leader>b xi<CR><Esc>
+nmap <Leader>n lxi<CR><Esc>
