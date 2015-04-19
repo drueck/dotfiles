@@ -68,3 +68,6 @@ export EDITOR=vim
 
 # Enable shims and autocompletion for exenv
 eval "$(exenv init -)"
+
+# load other machine specific aliases
+source $HOME/.aliases
