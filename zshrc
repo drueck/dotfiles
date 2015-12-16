@@ -67,7 +67,9 @@ export COFFEELINT_CONFIG=$HOME/.coffeelint.json
 export EDITOR=vim
 
 # Enable shims and autocompletion for exenv
-eval "$(exenv init -)"
+if hash exenv 2>/dev/null; then
+  eval "$(exenv init -)"
+fi
 
 # load other machine specific aliases
 source $HOME/.aliases
