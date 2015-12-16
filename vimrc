@@ -27,6 +27,7 @@ Plugin 'skwp/greplace.vim'
 Plugin 'yssl/QFEnter'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'christoomey/vim-tmux-runner'
+Plugin 'krisajenkins/vim-projectlocal'
 
 call vundle#end()
 filetype plugin indent on
