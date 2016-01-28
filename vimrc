@@ -52,6 +52,9 @@ syntax on
 let mapleader = " "
 
 colorscheme slate
+" override search highlight color settings
+hi IncSearch ctermfg=NONE ctermbg=black cterm=italic
+hi Search ctermfg=NONE ctermbg=black
 
 au BufRead,BufNewFile *.json setf javascript
 au BufRead,BufNewFile *.rabl setf ruby
@@ -135,6 +138,7 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
 set incsearch
+set nohlsearch
 
 " shortcuts for moving rest of long line to the next line
 nmap <Leader>b xi<CR><Esc>
