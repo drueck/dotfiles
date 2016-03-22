@@ -30,6 +30,7 @@ Plugin 'christoomey/vim-tmux-runner'
 Plugin 'krisajenkins/vim-projectlocal'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-repeat'
+Plugin 'tommcdo/vim-exchange'
 
 call vundle#end()
 filetype plugin indent on
