@@ -32,6 +32,7 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-repeat'
 Plugin 'tommcdo/vim-exchange'
 Plugin 'slashmili/alchemist.vim'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
