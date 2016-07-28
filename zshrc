@@ -55,12 +55,11 @@ plugins=(git command-not-found bundler rbenv tmuxinator rails)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=$PATH:/usr/local/heroku/bin:/home/david/projects/code-generation:/home/david/bin:$GOROOT/bin:$GOPATH/bin:$HOME/programs/node/bin
-
 export COFFEELINT_CONFIG=$HOME/.coffeelint.json
 export EDITOR=vim
 
 # load other machine specific aliases
 source $HOME/.aliases
+
+# set macine specific PATH, etc, here
 source $HOME/.zshrc.local
