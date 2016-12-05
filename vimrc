@@ -34,6 +34,7 @@ Plugin 'tommcdo/vim-exchange'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'fatih/vim-go'
 Plugin 'janko-m/vim-test'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
