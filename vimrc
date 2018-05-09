@@ -36,6 +36,7 @@ Plugin 'fatih/vim-go'
 Plugin 'janko-m/vim-test'
 Plugin 'tpope/vim-fugitive'
 Plugin 'prettier/vim-prettier'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 call vundle#end()
 filetype plugin indent on
@@ -161,3 +162,7 @@ nmap <Leader>n lxi<CR><Esc>
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
+
+" vim-markdown-preview
+let vim_markdown_preview_github=1
+let vim_markdown_preview_browser='Google Chrome'
