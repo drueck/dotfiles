@@ -6,7 +6,7 @@ call vundle#begin()
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'msanders/snipmate.vim'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'tpope/vim-rails'
@@ -37,6 +37,7 @@ Plugin 'janko-m/vim-test'
 Plugin 'tpope/vim-fugitive'
 Plugin 'prettier/vim-prettier'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 filetype plugin indent on
@@ -100,7 +101,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " specify the path to the ruby version for syntastic to use
-let g:syntastic_ruby_exec = system('rbenv global')
+" let g:syntastic_ruby_exec = system('rbenv global')
 
 " specify config file for coffeelint
 let coffee_lint_options = '-f ~/.coffeelint.json'
@@ -166,3 +167,25 @@ autocmd VimResized * :wincmd =
 " vim-markdown-preview
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
+
+" ale config
+let g:ale_linters = {
+\  'graphql': [],
+\  'javascript': ['eslint', 'flow'],
+\  'typescript': ['tsserver', 'typescript-eslint-parser']
+\}
+
+let g:ale_fixers = {
+\  'javascript': ['prettier'],
+\  'graphql': ['prettier'],
+\  'typescript': ['prettier'],
+\  'elixir': ['mix_format']
+\}
+
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_typescript_prettier_use_local_config = 1
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_sign_error = "⨉"
+let g:ale_sign_warning = "⚠"
+let g:ale_lint_on_text_changed = 'never'
