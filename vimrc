@@ -35,7 +35,6 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'fatih/vim-go'
 Plugin 'janko-m/vim-test'
 Plugin 'tpope/vim-fugitive'
-Plugin 'prettier/vim-prettier'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'w0rp/ale'
 
