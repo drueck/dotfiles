@@ -167,6 +167,7 @@ autocmd VimResized * :wincmd =
 " vim-markdown-preview
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_hotkey='<C-m>'
 
 " ale config
 let g:ale_linters = {
