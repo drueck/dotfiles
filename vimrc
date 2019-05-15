@@ -7,8 +7,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'msanders/snipmate.vim'
-" Plugin 'scrooloose/syntastic'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
@@ -38,6 +38,8 @@ Plugin 'janko-m/vim-test'
 Plugin 'tpope/vim-fugitive'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'w0rp/ale'
+Plugin 'rust-lang/rust.vim'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -173,14 +175,17 @@ let vim_markdown_preview_hotkey='<C-m>'
 let g:ale_linters = {
 \  'graphql': [],
 \  'javascript': ['eslint', 'flow'],
-\  'typescript': ['tsserver', 'typescript-eslint-parser']
+\  'typescript': ['tsserver', 'typescript-eslint-parser'],
+\  'elixir': ['mix'],
+\  'rust': ['cargo']
 \}
 
 let g:ale_fixers = {
 \  'javascript': ['prettier'],
 \  'graphql': ['prettier'],
 \  'typescript': ['prettier'],
-\  'elixir': ['mix_format']
+\  'elixir': ['mix_format'],
+\  'rust': ['rustfmt']
 \}
 
 let g:ale_fix_on_save = 1
