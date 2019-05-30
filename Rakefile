@@ -6,8 +6,9 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh]
+  files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh config]
   files << "oh-my-zsh/custom/drueck.zsh-theme"
+  files << "config/nvim"
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
