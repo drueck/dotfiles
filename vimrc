@@ -40,6 +40,7 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'w0rp/ale'
 Plugin 'rust-lang/rust.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'christoomey/vim-system-copy'
 
 call vundle#end()
 filetype plugin indent on
@@ -198,4 +199,4 @@ let g:ale_lint_on_text_changed = 'never'
 
 " copy and paste to and from system clipboard
 map <leader>y :w !pbcopy<CR><CR>
- map <leader>p :r !pbpaste<CR>
+map <leader>p :r !pbpaste<CR>
