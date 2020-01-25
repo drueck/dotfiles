@@ -208,4 +208,4 @@ highlight ALEWarning ctermbg=Black cterm=underline
 map <leader>y :w !pbcopy<CR><CR>
 map <leader>p :r !pbpaste<CR>
 
-nnoremap <C-p> :Files<cr>
+nnoremap <C-p> :GFiles --cached --others --exclude-standard<cr>
