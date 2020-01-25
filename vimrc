@@ -41,6 +41,7 @@ Plugin 'w0rp/ale'
 Plugin 'rust-lang/rust.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'christoomey/vim-system-copy'
+Plugin 'haya14busa/is.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -66,8 +67,8 @@ let mapleader = " "
 
 colorscheme slate
 " override search highlight color settings
-hi IncSearch ctermfg=NONE ctermbg=black cterm=italic
-hi Search ctermfg=NONE ctermbg=black
+hi IncSearch ctermfg=NONE ctermbg=blue cterm=italic
+hi Search ctermfg=NONE ctermbg=blue
 
 au BufRead,BufNewFile *.json setf javascript
 au BufRead,BufNewFile *.rabl setf ruby
@@ -158,7 +159,7 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
 set incsearch
-set nohlsearch
+set hlsearch
 
 " shortcuts for moving rest of long line to the next line
 nmap <Leader>b xi<CR><Esc>
@@ -178,7 +179,8 @@ let g:ale_linters = {
 \  'javascript': ['eslint', 'flow'],
 \  'typescript': ['tsserver', 'typescript-eslint-parser'],
 \  'elixir': ['mix'],
-\  'rust': ['cargo']
+\  'rust': ['cargo'],
+\  'ruby': ['rubocop']
 \}
 
 let g:ale_fixers = {
@@ -196,6 +198,10 @@ let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 let g:ale_sign_error = "⨉"
 let g:ale_sign_warning = "⚠"
 let g:ale_lint_on_text_changed = 'never'
+
+" trying these out
+highlight ALEError ctermbg=Black cterm=underline
+highlight ALEWarning ctermbg=Black cterm=underline
 
 " copy and paste to and from system clipboard
 map <leader>y :w !pbcopy<CR><CR>
