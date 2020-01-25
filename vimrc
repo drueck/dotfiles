@@ -22,7 +22,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'skwp/greplace.vim'
 Plugin 'yssl/QFEnter'
@@ -42,6 +41,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'haya14busa/is.vim'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -206,3 +207,5 @@ highlight ALEWarning ctermbg=Black cterm=underline
 " copy and paste to and from system clipboard
 map <leader>y :w !pbcopy<CR><CR>
 map <leader>p :r !pbpaste<CR>
+
+nnoremap <C-p> :Files<cr>
