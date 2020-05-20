@@ -1,7 +1,7 @@
 require 'rake'
 require 'erb'
 
-desc "install the dot files into user's home directory"
+desc "install the dotfiles into user's home directory"
 task :install do
   install_oh_my_zsh
   switch_to_zsh
@@ -34,8 +34,8 @@ task :install do
       link_file(file)
     end
   end
-	puts "Installing vim plugins with Vundle..."
-  system %{vim +PluginInstall +qall}
+  puts "Installing neovim plugins with VimPlug..."
+  system %{nvim +PlugInstall +qall}
 end
 
 def replace_file(file)
