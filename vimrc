@@ -1,3 +1,6 @@
+" This is deprecated for my setup.
+" See config/nvim/init.vim for neovim config entry point
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -43,6 +46,8 @@ Plugin 'christoomey/vim-system-copy'
 Plugin 'haya14busa/is.vim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'jxnblk/vim-mdx-js'
 
 call vundle#end()
 filetype plugin indent on
@@ -177,21 +182,24 @@ let vim_markdown_preview_hotkey='<C-m>'
 " ale config
 let g:ale_linters = {
 \  'graphql': [],
-\  'javascript': ['eslint', 'flow'],
+\  'javascript': ['eslint'],
 \  'typescript': ['tsserver', 'typescript-eslint-parser'],
-\  'elixir': ['mix'],
+\  'elixir': ['elixir-ls'],
 \  'rust': ['cargo'],
-\  'ruby': ['rubocop']
+\  'ruby': ['rubocop'],
+\  'python': ['flake8', 'pylint']
 \}
 
 let g:ale_fixers = {
 \  'javascript': ['prettier'],
+\  'mdx': ['prettier'],
 \  'graphql': ['prettier'],
 \  'typescript': ['prettier'],
 \  'elixir': ['mix_format'],
 \  'rust': ['rustfmt']
 \}
 
+let g:ale_elixir_elixir_ls_release = '~/projects/elixir-ls/rel'
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_typescript_prettier_use_local_config = 1
