@@ -34,6 +34,7 @@ task :install do
       link_file(file)
     end
   end
+  install_vim_plug
   puts "Installing neovim plugins with VimPlug..."
   system %{nvim +PlugInstall +qall}
 end
@@ -88,6 +89,23 @@ def install_oh_my_zsh
       exit
     else
       puts "skipping oh-my-zsh, you will need to change ~/.zshrc"
+    end
+  end
+end
+
+def install_vim_plug
+  if File.exist?(File.join(ENV["HOME"], '.config/nvim/autoload/plug.vim'))
+    puts "found ~/.config/nvim/autload/plug.vim"
+  else
+    print "install vim-plug? [ynq] "
+    case $stdin.gets.chomp
+    when "y"
+      puts "installing vim-plug"
+      system %Q{curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim}
+    when "q"
+      exit
+    else
+      puts "skipping vim-plug; subsequent plug install will fail"
     end
   end
 end
