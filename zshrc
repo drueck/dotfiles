@@ -55,7 +55,6 @@ plugins=(git command-not-found bundler rbenv tmuxinator rails)
 
 source $ZSH/oh-my-zsh.sh
 
-export COFFEELINT_CONFIG=$HOME/.coffeelint.json
 export EDITOR=vim
 
 # load other machine specific aliases

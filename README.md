@@ -5,16 +5,9 @@ Based on [Ryan Bates Dot Files](https://github.com/ryanb/dotfiles)
 ## What's Included
 
 - oh-my-zsh with drueck theme and basic zshrc
-- vimrc with some settings I like
-- vim directory including some plugins I use
+- neovim config
 - nice tmux config file from [ls-pair](https://github.com/livingsocial/ls-pair)
 - gitconfig setup including Ryan Bates' prompts for name and email
-- coffeelint config file
-
-Note that I have some things hardcoded in config files that won't be applicable
-on every machine, particularly in vimrc and zshrc. I should move those elsewhere
-so this is more applicable for others to use, but for now it's mostly just so I
-don't have to use Dropbox for my dotfiles anymore.
 
 ## Installation
 
@@ -37,10 +30,8 @@ To remove the dotfile configs, run the following commands. Be certain to double 
 the contents of the files before removing so you don't lose custom settings.
 
 ```
-unlink ~/.vim
-unlink ~/.vimrc
+unlink ~/.config/nvim
 unlink ~/.tmux.conf
-unlink ~/.coffeelint.json
 rm ~/.zshrc # careful here
 rm ~/.gitconfig
 rm -rf ~/.dotfiles
