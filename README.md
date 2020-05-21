@@ -9,6 +9,25 @@ Based on [Ryan Bates Dot Files](https://github.com/ryanb/dotfiles)
 - nice tmux config file from [ls-pair](https://github.com/livingsocial/ls-pair)
 - gitconfig setup including Ryan Bates' prompts for name and email
 
+## Prerequisites
+
+### Ruby
+
+The install script uses ruby, so you'll need to have ruby installed and the
+`rake` command on your path, which it should be if ruby is installed.  It
+should be installed on many modern operating systems already, but if it's
+missing and you want a recommendation, I typically use
+[asdf](https://github.com/asdf-vm/asdf) to install and manage ruby and other
+languages.
+
+### Neovim
+
+You will also need to install neovim before running running the install script
+below, and the installation method is different depending on the OS. See
+the following for OS-specific instructions:
+
+[Installing Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+
 ## Installation
 
 Run the following commands in your terminal. It will prompt you before it does
