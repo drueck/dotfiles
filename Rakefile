@@ -6,7 +6,7 @@ task :install do
   install_oh_my_zsh
   switch_to_zsh
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh config]
+  files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh config bin]
   files << "oh-my-zsh/custom/drueck.zsh-theme"
   files << "config/nvim"
   files.each do |file|
@@ -37,6 +37,7 @@ task :install do
   install_vim_plug
   puts "Installing neovim plugins with VimPlug..."
   system %{nvim +PlugInstall +qall}
+  install_scripts
 end
 
 def replace_file(file)
@@ -106,6 +107,23 @@ def install_vim_plug
       exit
     else
       puts "skipping vim-plug; subsequent plug install will fail"
+    end
+  end
+end
+
+def install_scripts
+  if File.exist?(File.join(ENV["HOME"], '.bin'))
+    puts "found ~/.bin"
+  else
+    print "symlink bin directory to ~/.bin? [ynq] "
+    case $stdin.gets.chomp
+    when "y"
+      puts "linking bin to ~/.bin"
+      system %Q{ln -s "$PWD/bin" "$HOME/.bin"}
+    when "q"
+      exit
+    else
+      puts "skipping symlinking .bin directory"
     end
   end
 end

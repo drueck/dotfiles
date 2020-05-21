@@ -8,6 +8,7 @@ Based on [Ryan Bates Dot Files](https://github.com/ryanb/dotfiles)
 - neovim config
 - nice tmux config file from [ls-pair](https://github.com/livingsocial/ls-pair)
 - gitconfig setup including Ryan Bates' prompts for name and email
+- bin/tat script for tmux
 
 ## Prerequisites
 
@@ -51,6 +52,7 @@ the contents of the files before removing so you don't lose custom settings.
 ```
 unlink ~/.config/nvim
 unlink ~/.tmux.conf
+unlink ~/.bin
 rm ~/.zshrc # careful here
 rm ~/.gitconfig
 rm -rf ~/.dotfiles

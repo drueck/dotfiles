@@ -60,5 +60,8 @@ export EDITOR=vim
 # load other machine specific aliases
 source $HOME/.aliases
 
-# set macine specific PATH, etc, here
+# add the ~/.bin directory to the path for scripts
+PATH=$PATH:~/.bin
+
+# set machine specific PATH, etc, here
 source $HOME/.zshrc.local
