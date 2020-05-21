@@ -55,7 +55,7 @@ plugins=(git command-not-found bundler rbenv tmuxinator rails)
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # load other machine specific aliases
 source $HOME/.aliases
