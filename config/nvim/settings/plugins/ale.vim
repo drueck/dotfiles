@@ -13,8 +13,9 @@ let g:ale_fixers = {
 \  'mdx': ['prettier'],
 \  'graphql': ['prettier'],
 \  'typescript': ['prettier'],
+\  'json': ['prettier'],
 \  'elixir': ['mix_format'],
-\  'rust': ['rustfmt']
+\  'rust': ['rustfmt'],
 \}
 
 let g:ale_elixir_elixir_ls_release = '~/projects/elixir-ls/rel'
