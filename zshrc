@@ -65,3 +65,10 @@ PATH=$PATH:~/.bin
 
 # set machine specific PATH, etc, here
 source $HOME/.zshrc.local
+
+# gcog: git checkout grep
+# usage: gcog <unique-part-of-branch-name>
+# runs: git checkout <branch-name>
+gcog() {
+  git branch | grep -m 1 $1 | xargs git checkout
+}
