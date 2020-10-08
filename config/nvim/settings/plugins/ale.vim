@@ -1,21 +1,26 @@
 let g:ale_linters = {
 \  'graphql': [],
 \  'javascript': ['eslint'],
+\  'javascriptreact': ['eslint'],
 \  'typescript': ['tsserver', 'typescript-eslint-parser'],
 \  'elixir': ['elixir-ls'],
 \  'rust': ['cargo'],
 \  'ruby': ['rubocop'],
-\  'python': ['flake8', 'pylint']
+\  'python': ['pylint'],
+\  'terraform': ['tflint'],
 \}
 
 let g:ale_fixers = {
 \  'javascript': ['prettier'],
+\  'javascriptreact': ['prettier'],
 \  'mdx': ['prettier'],
 \  'graphql': ['prettier'],
 \  'typescript': ['prettier'],
 \  'json': ['prettier'],
 \  'elixir': ['mix_format'],
 \  'rust': ['rustfmt'],
+\  'python': ['black'],
+\  'terraform': ['terraform'],
 \}
 
 let g:ale_elixir_elixir_ls_release = '~/projects/elixir-ls/rel'
