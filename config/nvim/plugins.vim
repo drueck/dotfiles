@@ -55,5 +55,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'krisajenkins/vim-projectlocal'
 Plug 'christoomey/vim-system-copy'
 Plug 'haya14busa/is.vim'
+Plug 'mihaifm/bufstop'
 
 call plug#end()

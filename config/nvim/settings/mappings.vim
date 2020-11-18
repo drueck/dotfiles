@@ -24,8 +24,7 @@ noremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
-" shortcuts for moving rest of long line to the next line
-nmap <Leader>b xi<CR><Esc>
+" move the rest of the line after the cursor to the next line
 nmap <Leader>n lxi<CR><Esc>
 
 " Note: other mappings may be present in plugin-specific configs
