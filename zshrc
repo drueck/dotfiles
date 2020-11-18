@@ -55,24 +55,6 @@ plugins=(git command-not-found bundler rbenv tmuxinator rails)
 
 source $ZSH/oh-my-zsh.sh
 
-# ZPlug
-source ~/.zplug/init.zsh
-
-zplug "RobertDeRose/virtualenv-autodetect"
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# Then, source plugins and add commands to $PATH
-zplug load --verbose
-# /ZPlug
-
-
 export EDITOR=nvim
 
 # load other machine specific aliases
