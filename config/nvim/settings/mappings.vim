@@ -27,4 +27,10 @@ nnoremap \ :Ag<SPACE>
 " move the rest of the line after the cursor to the next line
 nmap <Leader>n lxi<CR><Esc>
 
+" visually select last modified (pasted, typically) text
+nnoremap gp `[v`]
+
+" save with CTRL+W
+nnoremap <C-w> :w<CR>
+
 " Note: other mappings may be present in plugin-specific configs
