@@ -44,3 +44,6 @@ endif
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
+
+" treat terragrunt.hcl as terraform filetype
+au! BufNewFile,BufRead terragrunt.hcl set filetype=terraform syntax=terraform
