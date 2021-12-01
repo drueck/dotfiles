@@ -23,7 +23,8 @@ let g:ale_fixers = {
 \  'terraform': ['terraform'],
 \}
 
-let g:ale_elixir_elixir_ls_release = '~/projects/elixir-ls/rel'
+let g:ale_elixir_elixir_ls_release = expand('~/projects/elixir-ls/rel')
+let g:ale_elixir_elixir_ls_config = {'elixirLS': {'dialyzerEnabled': v:false}}
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_typescript_prettier_use_local_config = 1
