@@ -1,0 +1,16 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "elixir",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "jsx",
+    "rust",
+    "typescript",
+    "typescriptreact"
+  ],
+  "elixir.pathToElixirLS": "~/projects/elixir-ls/rel/language_server.sh",
+  "elixirLS.dialyzerEnabled": false,
+  "elixirLS.projectDir": "."
+}

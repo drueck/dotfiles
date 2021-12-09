@@ -19,6 +19,12 @@ set expandtab
 
 colorscheme slate
 
+" override popup menu colors
+hi Pmenu ctermbg=DarkGray
+" hi PmenuSel ctermbg=DarkGray
+" hi PmenuSbar guibg=#bcbcbc
+" hi PmenuThumb guibg=#585858
+
 set incsearch
 set hlsearch
 
