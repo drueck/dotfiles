@@ -20,8 +20,15 @@ nnoremap <leader><leader> <c-^>
 " bind K to grep word under cursor
 noremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-" bind \ (backward slash) to grep shortcut
+" Global search commands
+" Usage :[A|Ag] [--<language>] search term<ENTER>
+" Eg: :A --python PIL
+" Eg: :Ag --python PIL
+" A will show the results in an fzf popup which can then be fuzzy filtered
+command! -nargs=+ -complete=file A call fzf#vim#ag_raw(<q-args>)
+" Ag will show the results in a quickfix window
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+" bind \ (backward slash) to grep shortcut
 nnoremap \ :Ag<SPACE>
 
 " move the rest of the line after the cursor to the next line
