@@ -8,9 +8,20 @@
     "jsx",
     "rust",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "terraform"
   ],
   "elixir.pathToElixirLS": "~/projects/elixir-ls/rel/language_server.sh",
   "elixirLS.dialyzerEnabled": false,
-  "elixirLS.projectDir": "."
+  "elixirLS.projectDir": ".",
+  "python.formatting.provider": "black",
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
 }
