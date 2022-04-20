@@ -57,5 +57,6 @@ Plug 'krisajenkins/vim-projectlocal'
 Plug 'christoomey/vim-system-copy'
 Plug 'haya14busa/is.vim'
 Plug 'mihaifm/bufstop'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()

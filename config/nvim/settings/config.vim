@@ -17,13 +17,31 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-colorscheme slate
+" colorscheme stuff copied from jerelmiller/dotfiles
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-" override popup menu colors
-hi Pmenu ctermbg=DarkGray
-" hi PmenuSel ctermbg=DarkGray
-" hi PmenuSbar guibg=#bcbcbc
-" hi PmenuThumb guibg=#585858
+if (has("termguicolors"))
+  set termguicolors
+end
+
+" Nord settings which must be set before `colorscheme`
+let g:nord_cursor_line_number_background = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
+
+augroup nord-theme-overrides
+  autocmd!
+  autocmd ColorScheme nord highlight! CocUnusedHighlight cterm=underline ctermfg=4 gui=underline guifg=#4C5669
+augroup END
+
+set background=dark
+let g:enable_italic_font=1
+" g:hybrid_reduced_contrast=1
+" g:hybrid_custom_term_colors=1
+colorscheme nord
+
+highlight clear SignColumn
 
 set incsearch
 set hlsearch
