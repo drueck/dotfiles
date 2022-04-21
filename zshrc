@@ -7,9 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="drueck"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim=nvim
 alias phpl='find . -name "*.php" -exec php -l {} \; | grep -v "No syntax errors"'
 alias trash='trash-put'
 alias chrome=google-chrome
