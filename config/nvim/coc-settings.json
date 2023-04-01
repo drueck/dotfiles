@@ -12,6 +12,10 @@
     "terraform"
   ],
   "prettier.requireConfig": true,
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+  "elixirLS.fetchDeps": false,
+  "elixirLS.dialyzerEnabled": false,
+  "elixirLS.projectDir": ".",
   "python.formatting.provider": "black",
   "languageserver": {
     "terraform": {
@@ -22,9 +26,5 @@
       "settings": {}
     }
   },
-  "elixir.pathToElixirLS": "~/projects/elixir-ls/release/language_server.sh",
-  "elixirLS.fetchDeps": false,
-  "elixirLS.dialyzerEnabled": false,
-  "elixirLS.projectDir": ".",
   "rust-analyzer.checkOnSave.command": "clippy"
 }
