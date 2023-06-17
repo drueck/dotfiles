@@ -26,13 +26,14 @@ bash -c "$(curl -LsS https://raw.githubusercontent.com/drueck/dotfiles/main/boot
 
 Once you have gotten the dotfiles repo cloned, you can complete the setup.
 
+Note that the versions of the various programming languages that will be
+installed via asdf as part of this setup were the latest as of mid 2023, but
+you might want to update them before installing or just install newer/different
+versions in addition to the ones installed by default.
+
 ```terminal
 cd ~/projects/dotfiles/setup
 ./setup.sh
 ```
 
 After installing, close your terminal and open iTerm and you should be all set!
-
-Note that this setup doesn't install any versions of any programming languages
-except for rust. You'll be set up to install the versions you want with asdf
-for ruby, python, node, erlang, and elixir.
