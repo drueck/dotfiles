@@ -1,63 +1,38 @@
 # David Rueck's dotfiles
 
-Based on [Ryan Bates Dot Files](https://github.com/ryanb/dotfiles)
-
 ## What's Included
 
-- oh-my-zsh with drueck theme and basic zshrc
+- boostrap script borrowed from
+  [jerelmiller/dotfiles](https://github.com/jerelmiller/dotfiles) that creates
+  an ssh key and installs the xcode cli tools
+- setup script that installs everything else
+- basic zshrc, oh-my-zsh, and drueck theme
+- tmux config file inspired by [ls-pair](https://github.com/livingsocial/ls-pair)
 - neovim config
-- nice tmux config file from [ls-pair](https://github.com/livingsocial/ls-pair)
-- gitconfig setup including Ryan Bates' prompts for name and email
-- bin/tat script for tmux
+- tat script for tmux (also from jerel's dotfiles)
 
-## Prerequisites
+## Bootstrap
 
-### Ruby
-
-The install script uses ruby, so you'll need to have ruby installed and the
-`rake` command on your path, which it should be if ruby is installed.  It
-should be installed on many modern operating systems already, but if it's
-missing and you want a recommendation, I typically use
-[asdf](https://github.com/asdf-vm/asdf) to install and manage ruby and other
-languages.
-
-### Neovim
-
-You will also need to install neovim before running running the install script
-below, and the installation method is different depending on the OS. See
-the following for OS-specific instructions:
-
-[Installing Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-
-## Installation
-
-Run the following commands in your terminal. It will prompt you before it does
-anything destructive. Check out the Rakefile to see exactly what it does.
+If you have a new machine and you need the basics setup like getting your ssh key created
+and uploaded to github and the xcode cli tools (including git) installed, start with the
+bootstrap script which will interactively walk you through that process. At the end you will
+have this repo installed at `~/projects/dotfiles`.
 
 ```terminal
-git clone git://github.com/drueck/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-rake install
+bash -c "$(curl -LsS https://raw.githubusercontent.com/drueck/dotfiles/master/bootstrap.sh)"
 ```
 
-After installing, open a new terminal window to see the effects.
+## Setup
 
-Feel free to customize the .zshrc file to match your preference.
+Once you have gotten the dotfiles repo cloned, you can complete the setup.
 
-## Uninstall
-
-To remove the dotfile configs, run the following commands. Be certain to double check
-the contents of the files before removing so you don't lose custom settings.
-
-```
-unlink ~/.config/nvim
-unlink ~/.tmux.conf
-unlink ~/.bin
-rm ~/.zshrc # careful here
-rm ~/.gitconfig
-rm -rf ~/.dotfiles
-rm -rf ~/.oh-my-zsh
-chsh -s /bin/bash # change back to Bash if you want
+```terminal
+cd ~/projects/dotfiles/setup
+./setup.sh
 ```
 
-Then open a new terminal window to see the effects.
+After installing, close your terminal and open iTerm and you should be all set!
+
+Note that this setup doesn't install any versions of any programming languages
+except for rust. You'll be set up to install the versions you want with asdf
+for ruby, python, node, erlang, and elixir.

@@ -1,24 +1,20 @@
 #!/bin/sh
 
-fancy_echo() {
-  local fmt="$1"; shift
-
-  printf "\\n$fmt\\n" "$@"
-}
+# stolen from https://github.com/jerelmiller/dotfiles
 
 setup_ssh_key() {
-  fancy_echo "Generating ssh key..."
+  echo "Generating ssh key..."
   ssh-keygen -t ed25519 -C "drueck@gmail.com"
 
-  fancy_echo "Starting ssh-agent"
+  echo "Starting ssh-agent"
   eval "$(ssh-agent -s)"
 
-  fancy_echo "Adding SSH key to agent"
+  echo "Adding SSH key to agent"
   ssh-add $HOME/.ssh/id_ed25519
 
   pbcopy < $HOME/.ssh/id_ed25519.pub
 
-  fancy_echo "Copied ssh key. Please visit Github to add this ssh key and re-run this script."
+  echo "Copied ssh key. Please visit Github to add this ssh key and re-run this script."
 
   exit 0
 }
@@ -52,7 +48,7 @@ main() {
     git clone git@github.com:drueck/dotfiles.git $HOME/projects/dotfiles
   fi
 
-  fancy_echo "Success. When ready, run setup.sh with from the ~/project/dotfiles/setup/mac directory."
+  echo "Success. When ready, run setup.sh from the ~/project/dotfiles/setup directory."
 }
 
 main
