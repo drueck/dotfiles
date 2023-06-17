@@ -4,7 +4,7 @@
 
 - boostrap script borrowed from
   [jerelmiller/dotfiles](https://github.com/jerelmiller/dotfiles) that creates
-  an ssh key and installs the xcode cli tools
+  an ssh key, installs the xcode cli tools (including git), and clones this repo
 - setup script that installs everything else
 - basic zshrc, oh-my-zsh, and drueck theme
 - tmux config file inspired by [ls-pair](https://github.com/livingsocial/ls-pair)
