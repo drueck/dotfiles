@@ -19,7 +19,7 @@ bootstrap script which will interactively walk you through that process. At the 
 have this repo installed at `~/projects/dotfiles`.
 
 ```terminal
-bash -c "$(curl -LsS https://raw.githubusercontent.com/drueck/dotfiles/master/bootstrap.sh)"
+bash -c "$(curl -LsS https://raw.githubusercontent.com/drueck/dotfiles/main/bootstrap.sh)"
 ```
 
 ## Setup
