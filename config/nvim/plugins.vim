@@ -44,7 +44,8 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 
 " Linting/autoformatting
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -56,5 +57,6 @@ Plug 'krisajenkins/vim-projectlocal'
 Plug 'christoomey/vim-system-copy'
 Plug 'haya14busa/is.vim'
 Plug 'mihaifm/bufstop'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()

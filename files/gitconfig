@@ -1,6 +1,6 @@
 [user]
-	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+	name = David Rueck
+	email = drueck@gmail.com
 [alias]
 	graph = log --graph --oneline --all --decorate
 	co = checkout
