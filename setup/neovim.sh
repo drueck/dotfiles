@@ -11,7 +11,9 @@ if [[ ! -d ~/.config ]]; then
   mkdir ~/.config
 fi
 
-ln -sf ~/projects/dotfiles/config/nvim ~/.config/
+if [[ ! -d ~/.config/nvim ]]; then
+  ln -sf ~/projects/dotfiles/files/config/nvim ~/.config/
+fi
 
 echo "Neovim config is symlinked."
 
