@@ -6,6 +6,7 @@ set -e
 ./oh-my-zsh.sh
 ./homebrew.sh
 ./iterm2.sh
+./font.sh
 ./tmux.sh
 ./neovim.sh
 ./asdf.sh
