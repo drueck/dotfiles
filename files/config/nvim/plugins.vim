@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
-" Language pack that includes most languages
-Plug 'sheerun/vim-polyglot'
+" Syntax highlighting for various languages
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Elixir
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
