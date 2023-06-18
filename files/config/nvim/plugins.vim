@@ -64,5 +64,7 @@ Plug 'christoomey/vim-system-copy'
 Plug 'haya14busa/is.vim'
 Plug 'mihaifm/bufstop'
 Plug 'arcticicestudio/nord-vim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 
 call plug#end()
