@@ -43,9 +43,15 @@ Plug 'tpope/vim-eunuch'
 " Git
 Plug 'tpope/vim-fugitive'
 
-" Linting/autoformatting
-" Plug 'w0rp/ale'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" LSPs and Autocompletion
+Plug 'williamboman/mason.nvim', { 'do': ':MasonUpdate' }
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 " Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
