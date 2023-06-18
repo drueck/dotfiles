@@ -11,6 +11,7 @@ set -e
 ./asdf.sh
 ./asdf-ruby.sh
 ./asdf-nodejs.sh
+./node-globals.sh
 ./asdf-python.sh
 ./asdf-erlang.sh
 ./asdf-elixir.sh
