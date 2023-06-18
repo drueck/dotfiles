@@ -63,24 +63,31 @@ cmp.setup.cmdline(':', {
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- configure each lsp server
-require('lspconfig')['lua_ls'].setup {
+require('lspconfig').lua_ls.setup {
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = {'vim'}
+      },
+    },
+  },
+}
+require('lspconfig').rust_analyzer.setup {
   capabilities = capabilities
 }
-require('lspconfig')['rust_analyzer'].setup {
+require('lspconfig').elixirls.setup {
   capabilities = capabilities
 }
-require('lspconfig')['elixirls'].setup {
+require('lspconfig').eslint.setup {
   capabilities = capabilities
 }
-require('lspconfig')['eslint'].setup {
+require('lspconfig').tsserver.setup {
   capabilities = capabilities
 }
-require('lspconfig')['tsserver'].setup {
+require('lspconfig').pyright.setup {
   capabilities = capabilities
 }
-require('lspconfig')['pyright'].setup {
-  capabilities = capabilities
-}
-require('lspconfig')['ruby_ls'].setup {
+require('lspconfig').ruby_ls.setup {
   capabilities = capabilities
 }
