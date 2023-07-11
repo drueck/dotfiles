@@ -6,11 +6,15 @@ echo "Symlinking dotfiles..."
 
 ln -sf $FILES_DIR/zshrc ~/.zshrc
 ln -sf $FILES_DIR/tmux.conf ~/.tmux.conf
-ln -sf $FILES_DIR/gitconfig ~/.gitconfig
 
 if [[ ! -d ~/.bin ]]; then
   echo "Linking .bin directory..."
   ln -sf $FILES_DIR/bin ~/.bin
+fi
+
+if [[ ! -f ~/.gitconfig ]]; then
+  echo "Copying .gitconfig..."
+  cp $FILES_DIR/gitconfig ~/.gitconfig
 fi
 
 if [[ ! -f ~/.zshrc.local ]]; then
