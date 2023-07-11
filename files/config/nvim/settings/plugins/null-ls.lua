@@ -6,10 +6,13 @@ local diagnostics = null_ls.builtins.diagnostics
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
 null_ls.setup({
+  debug = true,
   sources = {
     -- formatting
     formatting.stylua,
-    formatting.prettier,
+    -- formatting.prettier.with({
+    --   local_only = true,
+    -- }),
     formatting.mix,
     formatting.rustfmt,
 
@@ -28,9 +31,9 @@ null_ls.setup({
         callback = function()
           vim.lsp.buf.format({
             bufnr = bufnr,
-            filter = function(_)
-              return client.name == 'null-ls'
-            end,
+            filter = function(cl)
+              return cl.name == "null-ls"
+            end
           })
         end,
       })

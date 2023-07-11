@@ -1,4 +1,4 @@
-local cmp = require'cmp'
+local cmp = require 'cmp'
 
 cmp.setup({
   -- snippet = {
@@ -68,26 +68,32 @@ require('lspconfig').lua_ls.setup {
   settings = {
     Lua = {
       diagnostics = {
-        globals = {'vim'}
+        globals = { 'vim' }
       },
     },
   },
 }
+
 require('lspconfig').rust_analyzer.setup {
   capabilities = capabilities
 }
+
 require('lspconfig').elixirls.setup {
   capabilities = capabilities
 }
-require('lspconfig').eslint.setup {
-  capabilities = capabilities
-}
+
 require('lspconfig').tsserver.setup {
-  capabilities = capabilities
+  capabilities = capabilities,
+  on_attach = function(client)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end,
 }
+
 require('lspconfig').pyright.setup {
   capabilities = capabilities
 }
+
 require('lspconfig').ruby_ls.setup {
   capabilities = capabilities
 }
