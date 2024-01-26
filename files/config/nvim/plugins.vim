@@ -69,5 +69,6 @@ Plug 'mihaifm/bufstop'
 Plug 'arcticicestudio/nord-vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'notjedi/nvim-rooter.lua'
 
 call plug#end()
