@@ -18,7 +18,10 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <leader><leader> <c-^>
 
 " bind K to grep word under cursor
-noremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" Note: K is now used to show the lsp hover content
+" I can use `gr` to list the references of the thing under cursor instead
+" but this might be useful still for fulltext search not using lsp later
+" noremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Global search commands
 " Usage :[A|Ag] [--<language>] search term<ENTER>
