@@ -1,11 +1,12 @@
-require('lualine').setup {
+require("lualine").setup({
   options = {
-    theme = 'nord',
+    theme = "nord",
   },
   sections = {
+    lualine_b = {},
     lualine_c = { {
-      'filename',
+      "filename",
       path = 1,
     } },
   },
-}
+})
