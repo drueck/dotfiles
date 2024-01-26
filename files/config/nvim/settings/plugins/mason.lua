@@ -1,4 +1,13 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "rust_analyzer", "elixirls", "tsserver", "eslint", "pyright", "ruby_ls" },
+  ensure_installed = {
+    "elixirls",
+    "eslint",
+    "lua_ls",
+    "pyright",
+    "ruby_ls",
+    "rust_analyzer",
+    "terraformls",
+    "tsserver",
+  },
 })
