@@ -19,6 +19,8 @@ set -e
 ./rust.sh
 ./yarn.sh
 ./ag.sh
+./fd.sh
+./rg.sh
 ./stylua.sh
 
 echo "Everything should be installed! Restart your shell to reload the environment."
