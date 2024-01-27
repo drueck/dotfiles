@@ -71,3 +71,6 @@ autocmd VimResized * :wincmd =
 
 " treat terragrunt.hcl as terraform filetype
 au! BufNewFile,BufRead terragrunt.hcl set filetype=terraform syntax=terraform
+
+" allow local config files
+set exrc
