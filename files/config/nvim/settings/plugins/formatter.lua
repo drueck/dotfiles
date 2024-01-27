@@ -65,7 +65,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     --
     -- vim.g.autoformat_types = {
     --   python = false,
-    --  javascript = false,
+    --   javascript = false,
     -- }
     if vim.g.autoformat_types then
       for type, enabled in pairs(vim.g.autoformat_types) do
