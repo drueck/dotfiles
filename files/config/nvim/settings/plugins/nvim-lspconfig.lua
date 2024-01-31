@@ -36,6 +36,7 @@ lspconfig.eslint.setup({
 
 lspconfig.pyright.setup({
   capabilities = capabilities,
+  root_dir = lspconfig.util.find_git_ancestor,
 })
 
 lspconfig.ruby_ls.setup({
