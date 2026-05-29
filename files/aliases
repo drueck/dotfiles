@@ -10,3 +10,5 @@ alias vim=nvim
 gcog() {
   git branch | grep -m 1 $1 | xargs git checkout
 }
+
+alias rb='git branch --sort=-committerdate'

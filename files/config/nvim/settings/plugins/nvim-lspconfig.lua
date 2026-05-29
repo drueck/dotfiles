@@ -1,10 +1,10 @@
--- Set up lspconfig.
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local lspconfig = require("lspconfig")
+-- Apply capabilities globally for nvim-cmp integration
+vim.lsp.config("*", {
+  capabilities = require("cmp_nvim_lsp").default_capabilities(),
+})
 
--- configure each lsp server
-lspconfig.lua_ls.setup({
-  capabilities = capabilities,
+-- lua_ls: recognize vim global
+vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
       diagnostics = {
@@ -14,43 +14,31 @@ lspconfig.lua_ls.setup({
   },
 })
 
-lspconfig.rust_analyzer.setup({
-  capabilities = capabilities,
+-- pyright: use git root for project detection
+vim.lsp.config("pyright", {
+  root_dir = vim.fs.root(0, ".git"),
 })
 
-lspconfig.elixirls.setup({
-  capabilities = capabilities,
-})
-
-lspconfig.tsserver.setup({
-  capabilities = capabilities,
+-- ts_ls: disable formatting (handled by formatter.nvim)
+vim.lsp.config("ts_ls", {
   on_attach = function(client)
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false
   end,
 })
 
-lspconfig.eslint.setup({
-  capabilities = capabilities,
-})
-
-lspconfig.pyright.setup({
-  capabilities = capabilities,
-  root_dir = lspconfig.util.find_git_ancestor,
-})
-
-lspconfig.ruby_ls.setup({
-  capabilities = capabilities,
-})
-
-lspconfig.terraformls.setup({
-  capabilities = capabilities,
+vim.lsp.enable({
+  "elixirls",
+  "eslint",
+  "lua_ls",
+  "pyright",
+  "ruby_lsp",
+  "rust_analyzer",
+  "terraformls",
+  "ts_ls",
 })
 
 -- Mappings for LSP
--- Initially from https://github.com/neovim/nvim-lspconfig#Suggested-configuration
---
--- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
@@ -81,6 +69,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
     vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
     vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
+    vim.keymap.set("n", "<C-space>", vim.lsp.buf.hover, opts)
+    vim.keymap.set("n", "<Leader>a", vim.lsp.buf.code_action, opts)
     vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
     vim.keymap.set("n", "<space>f", function()
       vim.lsp.buf.format({ async = true })

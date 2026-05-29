@@ -5,9 +5,10 @@ require("mason-lspconfig").setup({
     "eslint",
     "lua_ls",
     "pyright",
-    "ruby_ls",
+    "ruby_lsp",
     "rust_analyzer",
     "terraformls",
-    "tsserver",
+    "ts_ls",
   },
+  automatic_enable = false,
 })

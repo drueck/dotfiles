@@ -21,7 +21,7 @@ require("formatter").setup({
       require("formatter.filetypes.json").prettier,
     },
     python = {
-      require("formatter.filetypes.python").black,
+      require("formatter.filetypes.python").ruff,
     },
     rust = {
       require("formatter.filetypes.rust").rustfmt,
@@ -31,6 +31,12 @@ require("formatter").setup({
     },
     terraform = {
       require("formatter.filetypes.terraform").terraformfmt,
+    },
+    xml = {
+      require("formatter.filetypes.xml").tidy,
+    },
+    html = {
+      require("formatter.filetypes.html").tidy,
     },
   },
 })
@@ -46,6 +52,8 @@ local autoformat_types = {
   terraform = true,
   typescript = true,
   typescriptreact = true,
+  xml = true,
+  html = true,
 }
 
 vim.api.nvim_create_autocmd("BufWritePost", {

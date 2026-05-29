@@ -1,4 +1,4 @@
-require 'nvim-treesitter.configs'.setup {
+require("nvim-treesitter.configs").setup({
   ensure_installed = {
     "bash",
     "css",
@@ -7,6 +7,8 @@ require 'nvim-treesitter.configs'.setup {
     "javascript",
     "json",
     "lua",
+    "markdown",
+    "markdown_inline",
     "python",
     "ruby",
     "rust",
@@ -17,4 +19,4 @@ require 'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
   },
-}
+})

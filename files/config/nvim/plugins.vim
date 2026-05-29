@@ -1,7 +1,18 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Syntax highlighting for various languages
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master', 'do': ':TSUpdate'}
+
+" General vim
+Plug 'scrooloose/nerdtree'
+Plug 'krisajenkins/vim-projectlocal'
+Plug 'christoomey/vim-system-copy'
+Plug 'haya14busa/is.vim'
+Plug 'mihaifm/bufstop'
+Plug 'shaunsingh/nord.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'notjedi/nvim-rooter.lua'
 
 " Elixir
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
@@ -16,9 +27,6 @@ Plug 'ecomba/vim-ruby-refactoring'
 
 " GraphQL
 Plug 'jparise/vim-graphql'
-
-" Markdown
-Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Testing
 Plug 'janko-m/vim-test'
@@ -52,10 +60,8 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
 
 " Rust
-Plug 'simrat39/rust-tools.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'mfussenegger/nvim-dap'
 
@@ -66,15 +72,8 @@ Plug 'mhartington/formatter.nvim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" General vim
-Plug 'scrooloose/nerdtree'
-Plug 'krisajenkins/vim-projectlocal'
-Plug 'christoomey/vim-system-copy'
-Plug 'haya14busa/is.vim'
-Plug 'mihaifm/bufstop'
-Plug 'arcticicestudio/nord-vim'
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'nvim-tree/nvim-web-devicons'
-Plug 'notjedi/nvim-rooter.lua'
+" Claude Code
+Plug 'coder/claudecode.nvim'
+
 
 call plug#end()

@@ -32,15 +32,12 @@ command! -nargs=+ -complete=file A call fzf#vim#ag_raw(<q-args>)
 " Ag will show the results in a quickfix window
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 " bind \ (backward slash) to grep shortcut
-nnoremap \ :Ag<SPACE>
+nnoremap \ :Rg<SPACE>
 
 " move the rest of the line after the cursor to the next line
 nmap <Leader>n lxi<CR><Esc>
 
 " visually select last modified (pasted, typically) text
 nnoremap gp `[v`]
-
-" save with CTRL+W
-nnoremap <C-w> :w<CR>
 
 " Note: other mappings may be present in plugin-specific configs
