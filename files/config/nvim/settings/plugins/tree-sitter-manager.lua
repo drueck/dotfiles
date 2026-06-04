@@ -1,4 +1,4 @@
-require("nvim-treesitter.configs").setup({
+require("tree-sitter-manager").setup({
   ensure_installed = {
     "bash",
     "css",
@@ -6,17 +6,10 @@ require("nvim-treesitter.configs").setup({
     "html",
     "javascript",
     "json",
-    "lua",
-    "markdown",
-    "markdown_inline",
     "python",
     "ruby",
     "rust",
     "terraform",
-    "vim",
   },
-
-  highlight = {
-    enable = true,
-  },
+  highlight = true,
 })

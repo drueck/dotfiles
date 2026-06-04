@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Syntax highlighting for various languages
-Plug 'nvim-treesitter/nvim-treesitter', {'branch': 'master', 'do': ':TSUpdate'}
+Plug 'romus204/tree-sitter-manager.nvim'
 
 " General vim
 Plug 'scrooloose/nerdtree'

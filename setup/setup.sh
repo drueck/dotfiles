@@ -22,5 +22,6 @@ set -e
 ./fd.sh
 ./rg.sh
 ./stylua.sh
+./tree-sitter.sh
 
 echo "Everything should be installed! Restart your shell to reload the environment."
