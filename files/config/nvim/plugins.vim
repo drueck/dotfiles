@@ -9,7 +9,7 @@ Plug 'krisajenkins/vim-projectlocal'
 Plug 'christoomey/vim-system-copy'
 Plug 'haya14busa/is.vim'
 Plug 'mihaifm/bufstop'
-Plug 'shaunsingh/nord.nvim'
+Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'notjedi/nvim-rooter.lua'
