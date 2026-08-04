@@ -19,6 +19,14 @@ vim.lsp.config("pyright", {
   root_dir = vim.fs.root(0, ".git"),
 })
 
+-- ruff: disable formatting (handled by formatter.nvim), enable linting only
+vim.lsp.config("ruff", {
+  on_attach = function(client)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end,
+})
+
 -- ts_ls: disable formatting (handled by formatter.nvim)
 vim.lsp.config("ts_ls", {
   on_attach = function(client)
@@ -32,6 +40,7 @@ vim.lsp.enable({
   "eslint",
   "lua_ls",
   "pyright",
+  "ruff",
   "ruby_lsp",
   "rust_analyzer",
   "terraformls",

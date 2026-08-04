@@ -5,6 +5,7 @@ require("mason-lspconfig").setup({
     "eslint",
     "lua_ls",
     "pyright",
+    "ruff",
     "ruby_lsp",
     "rust_analyzer",
     "terraformls",
