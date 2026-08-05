@@ -72,6 +72,16 @@ Plug 'mhartington/formatter.nvim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" Text objects
+" mini.ai provides text object keymaps using Neovim's native treesitter API.
+" nvim-treesitter-textobjects is installed only for its query files (e.g.
+" queries/python/textobjects.scm), which define @function.outer etc. We can't
+" use it directly because its setup API requires nvim-treesitter, and the new
+" nvim-treesitter main (0.12+) removed that API — the textobjects plugin's
+" migration to the new API is still in progress (issue #772).
+Plug 'echasnovski/mini.ai', { 'branch': 'stable' }
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+
 " Claude Code
 Plug 'coder/claudecode.nvim'
 
