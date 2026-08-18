@@ -1,3 +1,4 @@
 *.swp
 files/config/nvim/autoload
 files/config/nvim/plugged
+.DS_Store
