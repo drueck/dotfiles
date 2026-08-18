@@ -43,7 +43,7 @@ vim.lsp.enable({
   "ruff",
   "ruby_lsp",
   "rust_analyzer",
-  "terraformls",
+  "tofu_ls",
   "ts_ls",
 })
 

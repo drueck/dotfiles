@@ -30,7 +30,7 @@ require("formatter").setup({
       require("formatter.filetypes.elixir").mixformat,
     },
     terraform = {
-      require("formatter.filetypes.terraform").terraformfmt,
+      require("formatter.filetypes.terraform").tofufmt,
     },
     xml = {
       require("formatter.filetypes.xml").tidy,
