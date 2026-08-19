@@ -32,6 +32,18 @@ require("formatter").setup({
     terraform = {
       require("formatter.filetypes.terraform").tofufmt,
     },
+    -- formatter.nvim has no hcl module. `tofu fmt` applies the same hclwrite
+    -- canonical formatting that `terragrunt hclfmt` does, so it's safe on
+    -- terragrunt.hcl and matches the repo's terragrunt-hclfmt pre-commit hook.
+    hcl = {
+      function()
+        return {
+          exe = "tofu",
+          args = { "fmt", "-" },
+          stdin = true,
+        }
+      end,
+    },
     xml = {
       require("formatter.filetypes.xml").tidy,
     },
@@ -43,6 +55,7 @@ require("formatter").setup({
 
 local autoformat_types = {
   elixir = true,
+  hcl = true,
   javascript = true,
   javascriptreact = true,
   json = true,

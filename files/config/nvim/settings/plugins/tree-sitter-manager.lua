@@ -3,6 +3,7 @@ require("tree-sitter-manager").setup({
     "bash",
     "css",
     "elixir",
+    "hcl",
     "html",
     "javascript",
     "json",
