@@ -50,6 +50,9 @@ require("formatter").setup({
     html = {
       require("formatter.filetypes.html").tidy,
     },
+    ruby = {
+      require("formatter.filetypes.ruby").standardrb,
+    },
   },
 })
 
@@ -67,6 +70,7 @@ local autoformat_types = {
   typescriptreact = true,
   xml = true,
   html = true,
+  ruby = true,
 }
 
 vim.api.nvim_create_autocmd("BufWritePost", {

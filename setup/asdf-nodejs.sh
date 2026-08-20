@@ -6,7 +6,7 @@ if [[ ! -d ~/.asdf/plugins/nodejs ]]; then
 
   echo "Installing node 20.3.0..."
   asdf install nodejs 20.3.0
-  asdf global nodejs 20.3.0
+  asdf set -u nodejs 20.3.0
 else
   echo "asdf-nodejs is installed."
 fi

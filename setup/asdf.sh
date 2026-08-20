@@ -1,18 +1,23 @@
 #!/bin/sh
 
-if [[ ! -d ~/.asdf ]]; then
+if ! command -v asdf &> /dev/null; then
   echo "Installing asdf."
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+  brew install asdf
+
+  echo "Configuring completions..."
+  mkdir -p "${ASDF_DATA_DIR:-$HOME/.asdf}/completions"
+  asdf completion zsh > "${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf"
 
   echo "Add asdf config to .zshrc.local..."
   cat <<'EOF' >> ~/.zshrc.local
-# actiate asdf
-. "$HOME/.asdf/asdf.sh"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
-# configure asdf completions
-fpath=(${ASDF_DIR}/completions $fpath)
+# append completions to fpath
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 EOF
+
 else
   echo "asdf is installed."
 fi

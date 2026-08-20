@@ -7,7 +7,7 @@ if [[ ! -d ~/.asdf/plugins/ruby ]]; then
 
   echo "Installing ruby 3.2.2..."
   asdf install ruby 3.2.2
-  asdf global ruby 3.2.2
+  asdf set -u ruby 3.2.2
 else
   echo "asdf-ruby is installed."
 fi
